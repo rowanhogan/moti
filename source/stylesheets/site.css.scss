@@ -2,34 +2,66 @@
 @import "normalize";
 
 body {
-  font-family: "DIN", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5em;
   color: #333;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  font-family: "Aktiv Grotesk";
 
   &.index {
-    background: hsl(200, 5%, 7.5%) url(https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?format=auto&auto=compress&dpr=2&crop=entropy&fit=crop&w=1147&h=765&q=80) no-repeat left;
+    background: hsl(200, 5%, 7.5%) url(https://images.unsplash.com/photo-1459664018906-085c36f472af?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0790a8686cb07ac8851066ef544f1082) no-repeat center;
     background-size: cover;
-    color: white;
 
-    a {
-      color: white;
+    &, a {
+      color: blueviolet;
+      mix-blend-mode: darken;
     }
 
-    nav .logo {
-      background: url("../images/logo-white.svg") no-repeat;
-      background-size: cover;
-
-      img {
-        visibility: hidden;
-      }
+    @media (min-width: 1000px) {
+      background-position: left;
     }
+
+
+    // nav .logo {
+    //   background: url("../images/logo-white.svg") no-repeat;
+    //   background-size: cover;
+    //
+    //   img {
+    //     visibility: hidden;
+    //   }
+    // }
   }
 }
 
+h1, h2, h3 {
+  line-height: 1.125em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+
 h1 {
-  font-size: 4em;
+  margin: 1em 0 .75em;
+}
+
+h2, h3 {
+  margin: 2.5em 0 1.25em;
+}
+
+h1 { font-size: 4em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+blockquote {
+  margin: 3em 0;
+  padding-left: 2em;
+  font-style: italic;
+  font-size: 1.5em;
+  line-height: 1.25em;
 }
 
 a {
@@ -38,11 +70,18 @@ a {
 
 figure {
   margin: 0;
-  width: 50%;
-  min-height: calc(100vh - 20em);
+
+  @media (min-width: 1000px) {
+    width: 50%;
+  }
 
   h2 {
     font-size: 3em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    margin: 0;
   }
 
   p {
@@ -52,10 +91,14 @@ figure {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
   padding: 2em;
   overflow: hidden;
+
+  @media (min-width: 800px) {
+    padding: 3em;
+  }
 }
 
 nav {
@@ -63,10 +106,10 @@ nav {
 
   a {
     display: inline-block;
-    vertical-align: middle;
-    height: 2em;
-    line-height: 3em;
-    font-size: 18px;
+    vertical-align: bottom;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
     text-decoration: none;
     padding-left: 1em;
   }
@@ -74,9 +117,11 @@ nav {
   .logo {
     float: left;
     padding: 0;
+    font-size: 1.25em;
+    font-weight: bold;
 
-    img {
-      height: 2em;
-    }
+    // img {
+    //   height: 2em;
+    // }
   }
 }

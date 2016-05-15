@@ -10,7 +10,7 @@
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
-    <%= favicon_tag 'favicon.ico' %>
+    <%= favicon_tag 'favicon.png' %>
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
   </head>
@@ -18,7 +18,7 @@
   <body class="<%= page_classes %>">
     <nav>
       <div class="container">
-        <%= link_to image_tag('logo.svg'), "/", class: 'logo' %>
+        <%= link_to "Museum of the Born Digital", "/", class: 'logo' %>
         <% data.moti.page.sort { |a,b| a[1]["order"] <=> b[1]["order"] }.each do |id, page| %>
           <% if page[:inMenu] %>
             <%= link_to page[:title], page[:slug] %>
